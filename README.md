@@ -96,9 +96,10 @@ Runnable commands will be added only when their implementation and tests exist.
 
 ## Delivery plan
 
-Work is intentionally issue-driven. Major milestones and their acceptance
-criteria are documented in [`docs/issues`](docs/issues/) and will be created as
-GitHub Issues before implementation begins.
+Work is intentionally issue-driven. Eight major milestones are tracked as
+[GitHub Issues](https://github.com/ganeshp9/banking-data-reliability-lab/issues),
+with their reviewed acceptance criteria also documented in
+[`docs/issues`](docs/issues/).
 
 ## Scope boundaries
 
