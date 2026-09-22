@@ -1,0 +1,41 @@
+name: Project milestone
+description: Plan one bounded delivery milestone with testable acceptance criteria.
+title: "[Milestone]: "
+labels: ["milestone"]
+body:
+  - type: markdown
+    attributes:
+      value: Keep scope narrow and use only synthetic, non-confidential data.
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What reviewer-visible outcome should this milestone deliver?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: List the work included in this milestone.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Provide a testable checklist.
+      value: |
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: exclusions
+    attributes:
+      label: Out of scope
+      description: State what this milestone deliberately will not implement.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Tests, screenshots, logs, benchmarks, or documentation required for closure.

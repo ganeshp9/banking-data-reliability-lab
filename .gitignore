@@ -1,0 +1,41 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.venv/
+venv/
+
+# Build output
+build/
+dist/
+
+# Generated project data
+data/raw/
+data/processed/
+data/quarantine/
+logs/
+artifacts/
+
+# Spark and Airflow runtime state
+.sparkStaging/
+spark-warehouse/
+metastore_db/
+airflow.db
+airflow-webserver.pid
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

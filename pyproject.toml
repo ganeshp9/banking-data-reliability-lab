@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "banking-data-reliability-lab"
+version = "0.1.0"
+description = "A synthetic data-engineering lab for pipeline reliability, data quality, reconciliation, and recovery."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "Ganesh Poudel" }]
+keywords = [
+  "data-engineering",
+  "data-quality",
+  "pyspark",
+  "airflow",
+  "sql",
+]
+dependencies = [
+  "pydantic>=2.8,<3.0",
+  "python-dotenv>=1.0,<2.0",
+  "PyYAML>=6.0,<7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.11,<2.0",
+  "pytest>=8.3,<9.0",
+  "pytest-cov>=5.0,<7.0",
+  "ruff>=0.8,<1.0",
+]
+data = [
+  "psycopg[binary]>=3.2,<4.0",
+  "pyspark>=3.5,<5.0",
+  "SQLAlchemy>=2.0,<3.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["banking_data_reliability_lab"]
